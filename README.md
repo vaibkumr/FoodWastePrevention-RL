@@ -62,3 +62,9 @@ P = 50
 
 ### Don't waste food. Some people really love it.
 ![](https://i.imgur.com/s9DjU2T.gif)
+
+### Credits
+My team for the hackathon during which I made the first version of this project. Thanks to them:
+- [Utsav Prabhakar](https://github.com/utsavprabhakar)
+- [Vaibhav kumar](https://github.com/vaibhavk97)
+- [Vikas Tomar](https://github.com/rootone-lab)
