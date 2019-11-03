@@ -122,11 +122,11 @@ if __name__ == "__main__":
     alpha = 0.9
     gamma = 0.99
     epsilon = 0.3
-    episodes = 10000
+    episodes = 500
     epislon_end_episode = episodes // 30
     max_steps = 2500
     n_tests = 1
-    save_freq = 1000
+    save_freq = 100
 
     Q_table = qlearning(alpha, gamma, epsilon, episodes,
                                 max_steps, n_tests, save_freq,

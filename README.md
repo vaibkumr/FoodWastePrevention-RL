@@ -5,7 +5,7 @@ Multi-Agent RL for dynamic pricing of food to save wastage while maximizing prof
 I haven't tested the economic sanity of my model here. This is a hobby project and I take no responsibility for the catastrophe you might face on deploying this for actual use. However, I am trying to fix as many things as I can.
 
 # What
-This is an experimental repository where I've written a multi-agent RL algorithm to prevent food wastage while maximizing profit. I wrote this during a hackathon (which I lost) and have made some minor fixes later (still in development stage). Hopefully, I will continue working on making this better with time.
+This is an experimental repository where I've written a multi-agent RL algorithm to prevent food wastage while maximizing profit. I wrote this during a hackathon (which I lost) and have made some minor fixes later (still in development stage). Hopefully, I will continue working on making this better with time. (for now, the task is so simple that even humans can do it)
 
 Some specifications:
 - Multiple agents for multiple items (one for each).
@@ -38,6 +38,11 @@ P = 50
 - `K` This constant determines how robust each item's demand is to the price (Basically the ratio of demand and price).
 - `P` Base price of the item.
 
+### logs
+- logs folder contains the Q-table agent uses for each item
+- `logs/<item name>/<episode number>.pkl` is the serialized Q-table for `<item name>` at `<episode number>`
+- save frequency is an argument that can be changed... somewhere (`train.py`)
+
 # More
 - Algorithm used: Qlearning (can be anything, SARSA, TD-lambda etc etc). Because of the implementation of the problem as a multi agent RL, the task is fairly simple here.
 - Reward function: `lambda1*profit - lambda2*waste` where `lambda1` and `lambda2` are two constants such that `lambda1+lambda2=1` (Basically linear interpolation). Maximizing this reward would mean maximizing profit while minimizing waste.
@@ -52,6 +57,7 @@ P = 50
 - ~~Write a global environment~~ DONE
 - Write DQN algorithm for the global environment: in progress
 - Write a proper document/blog/paper for explanation, motivation and reproducibility of this work
+- Read arguments from a config file. (this is a todo for a lot of my projects, I just never do it. a bad habit.)
 
 
 ### Don't waste food. Some people really love it.
